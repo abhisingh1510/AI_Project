@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CS F407 Demo</title>
+	<link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		button
+		{
+			color: black;
+			background-color: lightblue;
+		}
+		#max
+		{
+			color: black;
+			background-color: red;
+		}
+		.subdiv1
+		{
+			float: left;
+			width: 24%;			
+		}
+		.gamediv
+		{
+			float: left;
+			width: 50%;
+		}
+		.subdiv2
+		{
+			float: left;
+			width: 24%;
+		}
+		.maindiv
+		{
+			display: table;
+		}
+		div
+		{
+			margin: 2px;
+		}
+		.button 
+		{
+		  padding: 15px 25px;
+		  font-size: 24px;
+		  text-align: center;
+		  cursor: pointer;
+		  outline: none;
+		  color: #fff;
+		  background-color: #4CAF50;
+		  border: none;
+		  border-radius: 15px;
+		  box-shadow: 0 9px #999;
+		}
+
+		.button:hover {background-color: #3e8e41}
+
+		.button:active {
+		  background-color: #3e8e41;
+		  box-shadow: 0 5px #666;
+		  transform: translateY(4px);
+		}
+	</style>
+</head>
+<body>
+	<center>
+		<img src="./img/crossover.png" height="150" width="650"><br>
+		<div class="maindiv">
+			<div class="subdiv1" height="512">
+				<img src="./img/images.png" height="512" style="max-width: 100%">				
+			</div>
+			<div class="gamediv">
+				<canvas id="flappy" width="650" height="512"></canvas> <br>
+			</div>
+			<div class="subdiv2">
+				<img src="./img/names.png" height="512" style="max-width: 100%">
+			</div>
+		</div>	
+	<button class="button" onclick="speed(60)">x1</button> 
+	<button class="button" onclick="speed(120)">x2</button> 
+	<button class="button" onclick="speed(180)">x3</button> 
+	<button class="button" onclick="speed(300)">x5</button> 
+	<button class="button" onclick="speed(0)" id="max">MAX</button> 
+	<br/>
+	</center>
+	<script src = "Neuroevolution.js"></script>
+	<script src = "game.js"></script>
+</body>
+</html>
